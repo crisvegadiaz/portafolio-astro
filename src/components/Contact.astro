@@ -1,0 +1,92 @@
+<article class="contact">
+  <h2>Formulario</h2>
+  <p>Por favor, completa el siguiente formulario para contactarme:</p>
+  <p>Tu información será tratada con confidencialidad.</p>
+  <p>
+    Si prefieres, puedes enviarme un correo a:
+    <a
+      href="#"
+      onclick="window.location.href='mailto:' + ['alexander','gmail.com'].join('@'); return false;"
+    >
+      alexander@gmail.com
+    </a>
+  </p>
+  <p>Gracias por tu interés en mi trabajo.</p>
+  <form>
+    <label for="name">👤 Nombre:</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      placeholder="Tu nombre: ej. Alexander"
+      pattern="^[A-Za-z\s]+$"
+      title="Solo se permiten letras y espacios"
+      required
+    />
+    <label for="email">📧 Correo electrónico:</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      placeholder="Tu correo: ej. alexander@gmail.com "
+      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+      title="Formato de correo electrónico no válido"
+      required
+    />
+    <label for="message">✍️ Mensaje:</label>
+    <textarea
+      id="message"
+      name="message"
+      rows="4"
+      placeholder="Tu mensaje: ej. Hola, me gustaría saber más sobre tu trabajo."
+      minlength="1"
+      maxlength="500"
+      title="El mensaje debe tener entre 1 y 500 caracteres"
+      required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</article>
+
+<style>
+  .contact {
+    display: none;
+  }
+
+  .contact-active {
+    display: block;
+  }
+
+  article {
+    color: var(--color-white);
+    font-family: "Roboto", sans-serif;
+    margin: 1rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  label {
+    font-weight: bold;
+  }
+  input,
+  textarea {
+    color: var(--color-white);
+    padding: 0.5rem;
+    border: 1px solid var(--color-green);
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 700;
+    background-color: var(--color-navy-blue);
+    resize: none;
+  }
+  button {
+    padding: 0.5rem 1rem;
+    background-color: var(--color-light-blue);
+    color: var(--color-white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+</style>
