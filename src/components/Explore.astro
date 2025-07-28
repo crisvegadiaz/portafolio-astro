@@ -1,0 +1,139 @@
+---
+import ChevronRight from "../assets/icons/chevron-right.svg";
+import ChevronDown from "../assets/icons/chevron-down.svg";
+import FileSearch from "../assets/icons/file-search.svg";
+import Folder from "../assets/icons/folder.svg";
+import Menu from "../assets/icons/menu.svg";
+---
+
+<article class="explore">
+  <h2>EXPLORE<Menu /></h2>
+  <details>
+    <summary class="sidebar-title1">
+      <span class="icon-closed">
+        <ChevronRight />
+      </span>
+      <span class="icon-open">
+        <ChevronDown />
+      </span>
+      PROTAFOLIO
+    </summary>
+    <details>
+      <summary class="sidebar-title2">
+        <span class="icon-closed">
+          <ChevronRight />
+        </span>
+        <span class="icon-open">
+          <ChevronDown />
+        </span>
+        <Folder />
+      </summary>
+      <ul>
+        <li>
+          <a href="#"><FileSearch /> Astro</a>
+        </li>
+        <li>
+          <a href="#"><FileSearch /> React</a>
+        </li>
+        <li>
+          <a href="#"><FileSearch /> Vue</a>
+        </li>
+        <li>
+          <a href="#"><FileSearch /> Svelte</a>
+        </li>
+      </ul>
+    </details>
+  </details>
+  <article></article>
+</article>
+
+<style>
+  .explore {
+    display: none;
+  }
+
+  .explore-active {
+    display: block;
+  }
+
+  h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.8rem;
+    color: var(--color-white);
+    padding: 0.5rem 1rem;
+    margin: 0;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  details {
+    cursor: pointer;
+  }
+
+  .sidebar-title1 {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: var(--color-navy-blue);
+    padding: 5px 0;
+  }
+
+  summary {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem;
+  }
+
+  .sidebar-title2 {
+    padding: 5px 0 5px 1rem;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  summary:hover {
+    background-color: var(--color-dark-blue);
+  }
+
+  .icon-open {
+    display: none;
+  }
+  details[open] > summary .icon-open {
+    display: inline-block;
+  }
+  details[open] > summary .icon-closed {
+    display: none;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  ul li a {
+    padding: 5px 0 5px 2.5rem;
+  }
+  ul li a:hover {
+    background-color: var(--color-dark-blue);
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--color-white);
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.2s ease-in-out;
+  }
+  a:hover {
+    color: var(--color-purple);
+  }
+</style>
