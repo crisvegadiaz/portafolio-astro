@@ -1,0 +1,25 @@
+---
+import Explore from "./Explore.astro";
+import Contact from "./Contact.astro";
+---
+
+<section class="secondary-sidebar">
+  <Explore />
+  <Contact />
+</section>
+
+<style>
+  section {
+    width: 20rem;
+    background-color: var(--color-deep-blue);
+    padding: 0;
+  }
+  
+  .secondary-sidebar {
+    display: none;
+  }
+
+  .secondary-active {
+    display: block;
+  }
+</style>
