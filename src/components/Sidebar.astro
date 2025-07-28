@@ -1,0 +1,108 @@
+---
+import SecondarySidebar from "./SecondarySidebar.astro";
+import SearchIcon from "../assets/icons/search.svg";
+import GithubIcon from "../assets/icons/github.svg";
+import Linkedin from "../assets/icons/linkedin.svg";
+import EmailIcon from "../assets/icons/email.svg";
+import FileIcon from "../assets/icons/file.svg";
+---
+
+<header>
+  <nav>
+    <button
+      title="explore"
+      class="button"
+      aria-label="explore"
+      data-astro-prefetch="tap"
+    >
+      <FileIcon />
+    </button>
+    <button
+      title="search"
+      class="button"
+      aria-label="search"
+      data-astro-prefetch="tap"
+    >
+      <SearchIcon />
+    </button>
+    <button
+      title="contact"
+      class="button"
+      aria-label="contact"
+      data-astro-prefetch="tap"
+    >
+      <EmailIcon />
+    </button>
+    <a
+      title="GitHub"
+      href="https://github.com/crisvegadiaz"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="button"
+      aria-label="GitHub"
+    >
+      <GithubIcon />
+    </a>
+    <a
+      href="https://www.linkedin.com/in/cristian-diaz-vega-7a186521b/"
+      target="_blank"
+      rel="noopener noreferrer"
+      title="LinkedIn"
+      class="button"
+      aria-label="LinkedIn"
+    >
+      <Linkedin />
+    </a>
+  </nav>
+  <SecondarySidebar />
+</header>
+
+<script is:inline src="/js/sidebar.js"></script>
+
+<style>
+  header {
+    background-color: var(--color-dark-blue);
+    position: sticky;
+    top: 0;
+    z-index: 98;
+    height: 97vh;
+    display: flex;
+  }
+
+  nav {
+    width: 3rem;
+  }
+
+  .button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .button-active {
+    border-left: 3px solid var(--color-purple);
+  }
+
+  .button svg {
+    width: 30px;
+    height: 30px;
+    transition:
+      fill 0.2s ease-in-out,
+      transform 0.2s ease-in-out;
+  }
+
+  .button:hover svg {
+    transform: scale(1.15);
+  }
+
+  .button-active svg {
+    stroke: var(--color-white);
+    stroke-width: 4;
+  }
+</style>
