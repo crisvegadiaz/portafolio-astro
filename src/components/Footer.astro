@@ -1,0 +1,49 @@
+---
+import Code from "../assets/icons/code.svg";
+---
+
+<footer>
+  <Code />
+  <p>© 2025 Cristian C. All Irights reserved.</p>
+  <select name="language">
+    <option value="es">🇪🇸 Español</option>
+    <option value="en">🏴󠁧󠁢󠁥󠁮󠁧󠁿 English</option>
+  </select>
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-dark-blue);
+    align-items: center;
+    width: 100vw;
+    height: 1.5rem;
+    position: sticky;
+    bottom: 0;
+    margin: 0;
+    z-index: 99;
+  }
+  p {
+    margin: 0;
+    color: var(--color-white);
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+  }
+  svg {
+    padding: 0 0.5rem;
+    background-color: var(--color-purple);
+  }
+  select {
+    background-color: var(--color-purple);
+    color: var(--color-white);
+    border: none;
+    font-size: 15px;
+    padding: 0 0.5rem;
+    margin-right: 1rem;
+    font-family: "Roboto", sans-serif;
+  }
+  select:hover {
+    background-color: var(--color-purple);
+  }
+</style>
