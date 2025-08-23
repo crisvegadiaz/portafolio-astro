@@ -1,0 +1,40 @@
+---
+import SecondarySidebar from "../../components/SecondarySidebar.astro";
+import Content from "../../components/Content.astro";
+import Sidebar from "../../components/Sidebar.astro";
+import Footer from "../../components/Footer.astro";
+import esData from "../../assets/content/es.json";
+import enData from "../../assets/content/en.json";
+import Layout from "../../layouts/Layout.astro";
+import Code from "../../assets/icons/code.svg";
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: "es" }, props: { data: esData } },
+    { params: { lang: "en" }, props: { data: enData } },
+  ];
+}
+
+const { content, footer, sidebar } = Astro.props.data;
+---
+
+<Layout  content={content}>
+  <Sidebar sidebar={sidebar} />
+  <SecondarySidebar sidebar={sidebar} />
+  <Content content={content} />
+  <span><Code /></span>
+  <Footer footer={footer} />
+</Layout>
+
+<script is:inline src="/js/sidebar.js"></script>
+
+<style>
+  span {
+    grid-area: logo;
+    position: sticky;
+    bottom: 0;
+    display: grid;
+    place-items: center;
+    background-color: var(--color-purple);
+  }
+</style>

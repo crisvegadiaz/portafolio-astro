@@ -1,49 +1,77 @@
 ---
 import Code from "../assets/icons/code.svg";
+const { footer } = Astro.props;
+const keys = Object.keys(footer.languageOptions);
 ---
 
 <footer>
-  <Code />
-  <p>© 2025 Cristian C. All Irights reserved.</p>
-  <select name="language">
-    <option value="es">🇪🇸 Español</option>
-    <option value="en">🏴󠁧󠁢󠁥󠁮󠁧󠁿 English</option>
+  <p>{footer.copyright}</p>
+  <select id="language" name="language">
+    {
+      keys.map((key) => (
+        <option value={key} selected={key === footer.selectedLanguage}>
+          {footer.languageOptions[key]}
+        </option>
+      ))
+    }
   </select>
 </footer>
 
+<script is:inline src="/js/footer.js"></script>
+
 <style>
   footer {
+    grid-area: footer;
     display: flex;
-    justify-content: space-between;
-    background-color: var(--color-dark-blue);
     align-items: center;
-    width: 100vw;
-    height: 1.5rem;
+    background-color: var(--color-dark-blue);
     position: sticky;
     bottom: 0;
-    margin: 0;
     z-index: 99;
   }
   p {
-    margin: 0;
     color: var(--color-white);
-    font-size: 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
     font-family: "Roboto", sans-serif;
+    width: 100%;
   }
-  svg {
-    padding: 0 0.5rem;
-    background-color: var(--color-purple);
-  }
+
   select {
     background-color: var(--color-purple);
     color: var(--color-white);
     border: none;
-    font-size: 15px;
-    padding: 0 0.5rem;
-    margin-right: 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
     font-family: "Roboto", sans-serif;
+    cursor: pointer;
+    margin-right: 1rem;
   }
-  select:hover {
-    background-color: var(--color-purple);
+
+  @media (width < 1024px) {
+    footer {
+      overflow: hidden;
+    }
+    p {
+      padding: 0 1rem;
+      font-weight: 700;
+    }
+    select {
+      box-sizing: border-box;
+      font-weight: 700;
+      padding: 1rem;
+      margin-right: 0;
+    }
+  }
+
+  @media (width < 768px) {
+    p {
+      font-size: 0.8rem;
+    }
+    select {
+      font-size: 0.8rem;
+      margin-right: 0;
+    }
   }
 </style>
