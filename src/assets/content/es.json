@@ -1,0 +1,360 @@
+{
+  "sidebar": {
+    "explore": {
+      "title": "EXPLORAR",
+      "folder": "PROTAFOLIO",
+      "links": [
+        { "text": "Inicio", "href": "#start" },
+        { "text": "Tecnologías", "href": "#technical-skills" },
+        { "text": "Habilidades Blandas", "href": "#soft-skills" },
+        { "text": "Proyectos", "href": "#project" }
+      ]
+    },
+    "contact": {
+      "title": "Contáctame",
+      "email": "alexander85vega@gmail.com",
+      "ariaLabel": "Enviar un correo electrónico a {email}",
+      "description": [
+        "Por favor, completa el siguiente formulario para contactarme:",
+        "Tu información será tratada con confidencialidad.",
+        "Si prefieres, puedes enviarme un correo a:",
+        "Gracias por tu interés en mi trabajo."
+      ],
+      "form": {
+        "nameLabel": "👤 Nombre:",
+        "namePlaceholder": "Tu nombre: ej. Alexander",
+        "nameTitle": "Solo se permiten letras y espacios",
+        "emailLabel": "✉️ Correo electrónico:",
+        "emailPlaceholder": "Tu correo: ej. alexander@gmail.com",
+        "emailTitle": "Formato de correo electrónico no válido",
+        "messageLabel": "💬 Mensaje:",
+        "messagePlaceholder": "Tu mensaje: ej. Hola, me gustaría saber más sobre tu trabajo.",
+        "messageTitle": "El mensaje debe tener entre 1 y 500 caracteres",
+        "submitButton": "⌯⌲ Enviar"
+      }
+    },
+    "search": {
+    "title": "BÚSQUEDA",
+    "placeholder": "Buscar en el portafolio...",
+    "ariaLabel": "Buscar en el portafolio",
+    "titleInput": "Buscar contenido usando solo letras y espacios",
+    "links": [
+      { "text": "Inicio", "href": "#start" },
+      { "text": "Habilidades técnicas", "href": "#technical-skills" },
+      { "text": "Habilidades blandas", "href": "#soft-skills" },
+      { "text": "Proyectos", "href": "#project" }
+    ]
+  }
+  },
+  "content": {
+    "title": "Portafolio de Cristian Diaz Vega",
+    "description": "Portafolio de Cristian Diaz Vega, mostrando proyectos y habilidades en desarrollo web.",
+    "lang": "es",
+    "start": {
+      "title": "Desarrollador Web Fullstack",
+      "description": "👋¡Hola! Soy Cristian Diaz Vega, Técnico en Infraestructura IT y desarrollador web fullstack. Me apasiona resolver problemas reales mediante código limpio y eficiente. Me especializo en construir aplicaciones seguras, escalables y bien estructuradas, usando herramientas como React, Node.JavaScript y bases de datos SQL. Actualmente busco un rol donde pueda seguir creciendo, aportar valor y trabajar en equipo."
+    },
+    "technicalSkills": {
+      "title": "Tecnologías que domino",
+      "description": "Estas son las tecnologías y herramientas que manejo con soltura:",
+      "skillCategories": [
+        {
+          "subtitle": "Lenguajes",
+          "items": [
+            {
+              "item": "JavaScript",
+              "itemTitle": "Habilidad para construir interfaces de usuario interactivas y dinámicas con JavaScript, trabajando con librerías como React o Astro."
+            },
+            {
+              "item": "Java",
+              "itemTitle": "Habilidad para diseñar e implementar soluciones backend robustas y escalables utilizando Java, patrones de diseño y las mejores prácticas de la industria."
+            },
+            {
+              "item": "Node",
+              "itemTitle": "Habilidad para construir el backend de aplicaciones web con Node.JavaScript, utilizando APIs REST para la comunicación externa y protocolos eficientes como gRPC para los microservicios internos."
+            },
+            {
+              "item": "SQL",
+              "itemTitle": "Sólida experiencia en la gestión y administración de bases de datos relacionales como MariaDB, MySQL y PostgreSQL."
+            },
+            {
+              "item": "HTML5",
+              "itemTitle": "Sólida experiencia en la creación de la estructura de páginas web con HTML5, priorizando la semántica y la accesibilidad."
+            },
+            {
+              "item": "CSS3",
+              "itemTitle": "Sólida experiencia en el diseño y la maquetación de interfaces de usuario utilizando CSS3, priorizando el diseño responsivo y la accesibilidad."
+            }
+          ]
+        },
+        {
+          "subtitle": "Frameworks",
+          "items": [
+            {
+              "item": "React",
+              "itemTitle": "Desarrollo de aplicaciones front-end escalables con React, implementando arquitecturas basadas en componentes y gestionando el estado global con Redux."
+            },
+            {
+              "item": "Express",
+              "itemTitle": "Sólida experiencia en el desarrollo de APIs RESTful escalables con Express.JavaScript, manejando la lógica del servidor y el enrutamiento."
+            },
+            {
+              "item": "Astro",
+              "itemTitle": "Habilidad para construir sitios web estáticos y dinámicos con Astro, integrando fácilmente frameworks de UI como React."
+            },
+            {
+              "item": "Bootstrap",
+              "itemTitle": "Habilidad para diseñar y maquetar sitios web de manera rápida y eficiente, aprovechando los componentes y utilidades de Bootstrap."
+            },
+            {
+              "item": "ReactNative",
+              "itemTitle": "Habilidad para construir interfaces de usuario nativas y de alto rendimiento con React Native, integrando APIs y funcionalidades del dispositivo."
+            }
+          ]
+        },
+        {
+          "subtitle": "Tools",
+          "items": [
+            {
+              "item": "Linux",
+              "itemTitle": "Sólida experiencia en la administración de sistemas Linux y en la automatización de tareas mediante la creación de scripts de Bash."
+            },
+            {
+              "item": "Git",
+              "itemTitle": "Manejo de Git para el desarrollo y el historial de código."
+            },
+            {
+              "item": "GitHub",
+              "itemTitle": "Dominio de GitHub para la gestión de repositorios."
+            },
+            {
+              "item": "Docker",
+              "itemTitle": "Habilidad para empaquetar aplicaciones y sus dependencias en contenedores Docker para un despliegue rápido y escalable."
+            }
+          ]
+        }
+      ]
+    },
+    "softSkills": {
+      "title": "Habilidades Blandas",
+      "description": "Trabajo en equipo, escucho activamente y lidero proyectos con éxito:",
+      "skillCategories": [
+        {
+          "subtitle": "Organización",
+          "text": "Manejo eficiente de tareas y proyectos, asegurando el cumplimiento de plazos mediante planificación estructurada y herramientas digitales."
+        },
+        {
+          "subtitle": "Proactividad",
+          "text": "Anticipo problemas y propongo soluciones antes de que surjan, adaptándome rápidamente a nuevas tecnologías y metodologías."
+        },
+        {
+          "subtitle": "Autodidacta",
+          "text": "Aprendizaje continuo mediante investigación, cursos y práctica, manteniéndome siempre actualizado con nuevas tecnologías."
+        },
+        {
+          "subtitle": "Análisis",
+          "text": "Enfoque metódico para resolver problemas complejos, identificando patrones y aplicando soluciones basadas en datos y mejores prácticas."
+        }
+      ]
+    },
+    "project": {
+      "title": "Proyectos",
+      "description": "Resumen de habilidades técnicas y soft con tecnologías emergentes y automatización:",
+      "githubLinkTitle": "Ver el código de {subtitle} en GitHub",
+      "webLinkTitle": "Ver el proyecto {subtitle} en vivo",
+      "githubLinkText": "Repo en GitHub",
+      "webLinkText": "Demo en vivo",
+      "githubIconAlt": "Icono de GitHub",
+      "webIconAlt": "Icono de sitio web",
+      "cards": [
+        {
+          "img": "Microservicio.webp",
+          "subtitle": "Microservicios con Api-rest",
+          "icons": ["Node", "SQL","Docker"],
+          "text": "Este proyecto implementa una arquitectura basada en microservicios que combina las siguientes tecnologías: Node.JavaScript, Express, Base de Datos SQL y Podman. Cada microservicio tiene su propia base de datos y se comunica con otros microservicios a través de API REST.",
+          "links": ["https://github.com/crisvegadiaz/microservicios-api-rest"]
+        },
+        {
+          "img": "Chat.webp",
+          "subtitle": "Chat Node Socket",
+          "icons": ["React", "Node", "SQL"],
+          "text": "Chat en tiempo real con Node.JavaScript y Socket.io. Los usuarios pueden enviar mensajes de texto y ubicación en tiempo real.",
+          "links": [
+            "https://github.com/crisvegadiaz/chat-node-socket",
+            "https://chat-node-socket-mar4.onrender.com/"
+          ]
+        },
+        {
+          "img": "ApiRest.webp",
+          "subtitle": "API REST",
+          "icons": ["Node"],
+          "text": "API REST Node.JavaScript construida con el framework Express, utilizando PostgreSQL como base de datos, JavaScriptON Web Tokens para autenticación y HTTPS para asegurar la comunicación.",
+          "links": [
+            "https://github.com/crisvegadiaz/api-rest_Node_Express_HTTPS"
+          ]
+        },
+        {
+          "img": "PhaserJuego.webp",
+          "subtitle": "Juego Phaser",
+          "icons": ["React", "CSS3"],
+          "text": "Un juego estilo Flappy Bird! 🐦🎮 desarrollado con React, Phaser, y CSS. Inspirado en el clásico Flappy Bird.",
+          "links": [
+            "https://github.com/crisvegadiaz/Phaser-React-flappy-bird",
+            "https://phaser-juego.netlify.app/"
+          ]
+        },
+        {
+          "img": "Login.webp",
+          "subtitle": "Login",
+          "icons": ["React", "CSS3", "Node", "SQL"],
+          "text": "El backend está creado en Node con Express y express-session. El frontend fue hecho con React y CSS con React-router-dom, y la base de datos con MySQL.",
+          "links": ["https://github.com/crisvegadiaz/Login-React-node-express"]
+        },
+        {
+          "img": "AppPomodoro.webp",
+          "subtitle": "Pomodoro",
+          "icons": ["React", "CSS3"],
+          "text": "Una aplicación Pomodoro creada con React Native y CSS. Esta app te ayuda a gestionar tu tiempo de trabajo y descanso utilizando la técnica Pomodoro.",
+          "links": ["https://github.com/crisvegadiaz/ReactNative_Pomodoro"]
+        },
+        {
+          "img": "AppNaza.webp",
+          "subtitle": "App NASA",
+          "icons": ["React", "CSS3"],
+          "text": "Una aplicación creada con React Native y CSS que te permite explorar datos y noticias de la NASA, manteniéndote informado sobre el espacio y las misiones espaciales.",
+          "links": ["https://github.com/crisvegadiaz/ReactNative_ProyectoNasa-"]
+        },
+        {
+          "img": "AppCaloria.webp",
+          "subtitle": "App Caloría",
+          "icons": ["React", "CSS3"],
+          "text": "Una aplicación para contar calorías, desarrollada con React Native y CSS. Te ayuda a seguir tu ingesta diaria de calorías y mantener un estilo de vida saludable.",
+          "links": ["https://github.com/crisvegadiaz/ReactNative_AppCalorias"]
+        },
+        {
+          "img": "JuegodelHorcado.webp",
+          "subtitle": "Juego del Ahorcado",
+          "icons": ["HTML5", "CSS3", "JavaScript"],
+          "text": "Esta página, creada con HTML, CSS y JavaScript, te permite disfrutar del popular juego del ahorcado en cualquier momento y lugar. Adivina la palabra secreta letra por letra antes de que se complete el ahorcado.",
+          "links": [
+            "https://github.com/crisvegadiaz/juego_del_ahorcado",
+            "https://superlative-liger-734e6a.netlify.app/"
+          ]
+        },
+        {
+          "img": "ReactJuegodelHorcado.webp",
+          "subtitle": "Juego del Ahorcado en React",
+          "icons": ["React", "JavaScript"],
+          "text": "Esta página, creada con HTML, CSS, JavaScript y React te permite disfrutar del popular juego del ahorcado en cualquier momento y lugar. Adivina la palabra secreta letra por letra antes de que se complete el ahorcado.",
+          "links": [
+            "https://github.com/crisvegadiaz/JuegoDelHorcadoReact",
+            "https://mellow-zabaione-2b201e.netlify.app/"
+          ]
+        },
+        {
+          "img": "Calculadora.webp",
+          "subtitle": "Calculadora en React",
+          "icons": ["React", "CSS3", "JavaScript"],
+          "text": "En esta página web, puedes realizar operaciones matemáticas básicas de forma rápida y sencilla, la web está creada con las tecnologías HTML, CSS, JavaScript y React.",
+          "links": [
+            "https://github.com/crisvegadiaz/ReactCalculadora",
+            "https://astounding-sawine-944061.netlify.app/"
+          ]
+        },
+        {
+          "img": "ViteReact.webp",
+          "subtitle": "Citas Aleatorias",
+          "icons": ["React", "CSS3", "JavaScript"],
+          "text": "En esta página web, puedes encontrar frases motivadoras y reflexivas de diferentes autores y épocas. Cada vez que cargues la página, se mostrará una cita nueva al azar, la web está creada con las tecnologías HTML, CSS, JavaScript y React",
+          "links": [
+            "https://github.com/crisvegadiaz/React-citas-aleatorio-",
+            "https://effervescent-starlight-af3e40.netlify.app/"
+          ]
+        },
+        {
+          "img": "ReactRelojo.webp",
+          "subtitle": "Reloj de Descanso",
+          "icons": ["React", "CSS3", "JavaScript"],
+          "text": "¡El Reloj de Descanso es la solución perfecta para ti! Esta herramienta, creada con HTML, CSS, JavaScript y React, te ayuda a optimizar tu tiempo de trabajo y mejorar tu bienestar.",
+          "links": [
+            "https://github.com/crisvegadiaz/ReactReloj",
+            "https://mellifluous-brioche-683a3b.netlify.app/"
+          ]
+        },
+        {
+          "img": "Encritador.webp",
+          "subtitle": "Encriptado de Texto",
+          "icons": ["HTML5", "CSS3", "JavaScript"],
+          "text": "En esta página web, puedes cifrar y descifrar tus mensajes de forma segura y gratuita, la página web está creada con las tecnologías HTML, CSS y JavaScript.",
+          "links": [
+            "https://github.com/crisvegadiaz/encriptador",
+            "https://venerable-bavarois-ba1789.netlify.app/"
+          ]
+        },
+        {
+          "img": "Gonzalez.webp",
+          "subtitle": "Página Escolar",
+          "icons": ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+          "text": "Esta página web, creada con HTML, CSS, JavaScript y Bootstrap, ofrece una experiencia educativa dinámica e interactiva para estudiantes de todas las edades.",
+          "links": [
+            "https://github.com/crisvegadiaz/Pagina-institucional",
+            "https://clinquant-travesseiro-9bd6ec.netlify.app/"
+          ]
+        },
+        {
+          "img": "MarcadorDeMarkdown.webp",
+          "subtitle": "Marcador de Markdown",
+          "icons": ["HTML5", "CSS3", "JavaScript", "React"],
+          "text": "Este Marcador de Markdown, creado con HTML, CSS, JavaScript y React, te ofrece todo lo que necesitas para trabajar con tus archivos Markdown de manera eficiente.",
+          "links": [
+            "https://github.com/crisvegadiaz/ReactMarcadorDeMarkdown",
+            "https://heroic-zuccutto-e7944c.netlify.app/"
+          ]
+        },
+        {
+          "img": "Scritp.webp",
+          "subtitle": "Scripts en Bash",
+          "icons": ["Linux"],
+          "text": "Los Scripts son una colección de programas o scripts escritos en lenguaje Bash, diseñados para automatizar tareas en sistemas operativos Linux.",
+          "links": ["https://github.com/crisvegadiaz/script_sh"]
+        },
+        {
+          "img": "NodeClima.webp",
+          "subtitle": "Node Weather",
+          "icons": ["Node"],
+          "text": "Esta aplicación Node.JavaScript obtiene y muestra información meteorológica actual para una ciudad dada utilizando la API de OpenWeatherMap.",
+          "links": ["https://github.com/crisvegadiaz/NodeWeather"]
+        },
+        {
+          "img": "NodeList.webp",
+          "subtitle": "Node To-Do App",
+          "icons": ["Node"],
+          "text": "Este programa utiliza Node.JavaScript y algunas bibliotecas externas como 'readline' y 'chalk' para crear una aplicación de lista de tareas simple.",
+          "links": ["https://github.com/crisvegadiaz/NodeToDoApp"]
+        },
+        {
+          "img": "NodeImg.webp",
+          "subtitle": "Optimizado de Imágenes",
+          "icons": ["Node"],
+          "text": "Este script de Node.JavaScript está diseñado para optimizar imágenes en una carpeta específica. Utiliza diversas bibliotecas, como sharp para redimensionar imágenes y imagemin para comprimir imágenes en varios formatos.",
+          "links": ["https://github.com/crisvegadiaz/NodeToDoApp"]
+        },
+        {
+          "img": "HotelJava.webp",
+          "subtitle": "Registro a Hotel",
+          "icons": ["Java", "SQL"],
+          "text": "El sistema está desarrollado con Java y MySQL. Java se utiliza para crear la interfaz de usuario y la lógica del programa, mientras que MySQL almacena los datos de reservas y huéspedes.",
+          "links": ["https://github.com/crisvegadiaz/Hotel-Alura"]
+        }
+      ]
+    }
+  },
+  "footer": {
+    "copyright": "©️ 2025 Cristian Diaz Vega. Todos los derechos reservados.",
+    "languageOptions": {
+      "title": "🌐 Idioma",
+      "es": "🇪🇸 Español",
+      "en": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Inglés"
+    }
+  }
+}

@@ -1,0 +1,360 @@
+{
+  "sidebar": {
+    "explore": {
+      "title": "EXPLORE",
+      "folder": "PORTFOLIO",
+      "links": [
+        { "text": "Start", "href": "#start" },
+        { "text": "Technical Skills", "href": "#technical-skills" },
+        { "text": "Soft Skills", "href": "#soft-skills" },
+        { "text": "Project", "href": "#project" }
+      ]
+    },
+    "contact": {
+      "title": "Contact me",
+      "email": "alexander85vega@gmail.com",
+      "ariaLabel": "Send an email to {email}",
+      "description": [
+        "Please fill out the form below to contact me:",
+        "Your information will be treated with confidentiality.",
+        "If you prefer, you can send me an email to:",
+        "Thank you for your interest in my work."
+      ],
+      "form": {
+        "nameLabel": "👤 Name:",
+        "namePlaceholder": "Your name: e.g. Alexander",
+        "nameTitle": "Only letters and spaces are allowed",
+        "emailLabel": "✉️ Email:",
+        "emailPlaceholder": "Your email: e.g. alexander@gmail.com",
+        "emailTitle": "Invalid email format",
+        "messageLabel": "💬 Message:",
+        "messagePlaceholder": "Your message: e.g. Hello, I would like to know more about your work.",
+        "messageTitle": "The message must be between 1 and 500 characters",
+        "submitButton": "⌯⌲ Send"
+      }
+    },
+    "search": {
+      "title": "SEARCH",
+      "placeholder": "Search in the portfolio...",
+      "ariaLabel": "Search in the portfolio",
+      "titleInput": "Search for content using letters and spaces only",
+      "links": [
+        { "text": "Start", "href": "#start" },
+        { "text": "Technical Skills", "href": "#technical-skills" },
+        { "text": "Soft Skills", "href": "#soft-skills" },
+        { "text": "Project", "href": "#project" }
+      ]
+    }
+  },
+  "content": {
+    "title": "Cristian Diaz Vega's Portfolio",
+    "description": "Cristian Diaz Vega portfolio, showing web development projects and skills.",
+    "lang": "en",
+    "start": {
+      "title": "Fullstack Web Developer",
+      "description": "👋 Hello! I'm Cristian Diaz Vega, an IT Infrastructure Technician and fullstack web developer. I am passionate about solving real-world problems through clean and efficient code. I specialize in building secure, scalable, and well-structured applications using tools like React, Node.js, and SQL databases. I am currently looking for a role where I can continue to grow, add value, and work as part of a team."
+    },
+    "technicalSkills": {
+      "title": "Technologies I Master",
+      "description": "These are the technologies and tools that I handle with ease:",
+      "skillCategories": [
+        {
+          "subtitle": "Languages",
+          "items": [
+            {
+              "item": "JavaScript",
+              "itemTitle": "Skilled in building interactive and dynamic user interfaces with JavaScript, working with libraries like React or Astro."
+            },
+            {
+              "item": "Java",
+              "itemTitle": "Able to design and implement robust and scalable backend solutions using Java, design patterns, and industry best practices."
+            },
+            {
+              "item": "Node",
+              "itemTitle": "Proficient in building the backend of web applications with Node.js, using REST APIs for external communication and efficient protocols like gRPC for internal microservices."
+            },
+            {
+              "item": "SQL",
+              "itemTitle": "Solid experience in managing and administering relational databases such as MariaDB, MySQL, and PostgreSQL."
+            },
+            {
+              "item": "HTML5",
+              "itemTitle": "Solid experience in creating website structures with HTML5, prioritizing semantics and accessibility."
+            },
+            {
+              "item": "CSS3",
+              "itemTitle": "Solid experience in designing and laying out user interfaces using CSS3, prioritizing responsive design and accessibility."
+            }
+          ]
+        },
+        {
+          "subtitle": "Frameworks",
+          "items": [
+            {
+              "item": "React",
+              "itemTitle": "Developing scalable front-end applications with React, implementing component-based architectures and managing global state with Redux."
+            },
+            {
+              "item": "Express",
+              "itemTitle": "Solid experience in developing scalable RESTful APIs with Express.js, handling server logic and routing."
+            },
+            {
+              "item": "Astro",
+              "itemTitle": "Skilled in building static and dynamic websites with Astro, easily integrating UI frameworks like React."
+            },
+            {
+              "item": "Bootstrap",
+              "itemTitle": "Able to design and lay out websites quickly and efficiently, leveraging Bootstrap components and utilities."
+            },
+            {
+              "item": "ReactNative",
+              "itemTitle": "Skilled in building high-performance native user interfaces with ReactNative, integrating device APIs and functionalities."
+            }
+          ]
+        },
+        {
+          "subtitle": "Tools",
+          "items": [
+            {
+              "item": "Linux",
+              "itemTitle": "Solid experience in Linux system administration and in automating tasks by creating Bash scripts."
+            },
+            {
+              "item": "Git",
+              "itemTitle": "Proficient in using Git for code versioning and history."
+            },
+            {
+              "item": "GitHub",
+              "itemTitle": "Expertise in using GitHub for repository management."
+            },
+            {
+              "item": "Docker",
+              "itemTitle": "Able to package applications and their dependencies into Docker containers for fast and scalable deployment."
+            }
+          ]
+        }
+      ]
+    },
+    "softSkills": {
+      "title": "Soft Skills",
+      "description": "Summary of technical and soft skills with emerging technologies and automation:",
+      "skillCategories": [
+        {
+          "subtitle": "Organization",
+          "text": "Efficient management of tasks and projects, ensuring deadlines are met through structured planning and digital tools."
+        },
+        {
+          "subtitle": "Proactivity",
+          "text": "I anticipate problems and propose solutions before they arise, adapting quickly to new technologies and methodologies."
+        },
+        {
+          "subtitle": "Self-taught",
+          "text": "Continuous learning through research, courses, and practice, always staying up-to-date with new technologies."
+        },
+        {
+          "subtitle": "Analysis",
+          "text": "Methodical approach to solving complex problems, identifying patterns and applying solutions based on data and best practices."
+        }
+      ]
+    },
+    "project": {
+      "title": "Project",
+      "description": "Teamwork, active listening, and successful project leadership:",
+      "githubLinkTitle": "View source code for {subtitle} on GitHub",
+      "webLinkTitle": "View the {subtitle} project live",
+      "githubLinkText": "GitHub Repo",
+      "webLinkText": "Live Demo",
+      "githubIconAlt": "GitHub icon",
+      "webIconAlt": "Website icon",
+      "cards": [
+        {
+          "img": "Microservicio.webp",
+          "subtitle": "Microservices with API-REST",
+          "icons": ["Node", "SQL","Docker"],
+          "text": "This project implements a microservices-based architecture that combines the following technologies: Node.js, Express, a SQL Database, and Podman. Each microservice has its own database and communicates with other microservices through REST APIs.",
+          "links": ["https://github.com/crisvegadiaz/microservicios-api-rest"]
+        },
+        {
+          "img": "Chat.webp",
+          "subtitle": "Node Socket Chat",
+          "icons": ["React", "Node", "SQL"],
+          "text": "Real-time chat with Node.js and Socket.io. Users can send text messages and real-time location.",
+          "links": [
+            "https://github.com/crisvegadiaz/chat-node-socket",
+            "https://chat-node-socket-mar4.onrender.com/"
+          ]
+        },
+        {
+          "img": "ApiRest.webp",
+          "subtitle": "REST API",
+          "icons": ["Node"],
+          "text": "Node.js REST API built with the Express framework, using PostgreSQL as the database, JSON Web Tokens for authentication, and HTTPS to secure communication.",
+          "links": [
+            "https://github.com/crisvegadiaz/api-rest_Node_Express_HTTPS"
+          ]
+        },
+        {
+          "img": "PhaserJuego.webp",
+          "subtitle": "Phaser Game",
+          "icons": ["React", "CSS3"],
+          "text": "A Flappy Bird style game! 🐦🎮 developed with React, Phaser, and CSS. Inspired by the classic Flappy Bird.",
+          "links": [
+            "https://github.com/crisvegadiaz/Phaser-React-flappy-bird",
+            "https://phaser-juego.netlify.app/"
+          ]
+        },
+        {
+          "img": "Login.webp",
+          "subtitle": "Login",
+          "icons": ["React", "CSS3", "Node", "SQL"],
+          "text": "The backend is created in Node with Express and express-session. The frontend was made with React and CSS with React-router-dom, and the database with MySQL.",
+          "links": ["https://github.com/crisvegadiaz/Login-React-node-express"]
+        },
+        {
+          "img": "AppPomodoro.webp",
+          "subtitle": "Pomodoro App",
+          "icons": ["React", "CSS3"],
+          "text": "A Pomodoro application created with React Native and CSS. This app helps you manage your work and rest time using the Pomodoro technique.",
+          "links": ["https://github.com/crisvegadiaz/ReactNative_Pomodoro"]
+        },
+        {
+          "img": "AppNaza.webp",
+          "subtitle": "NASA App",
+          "icons": ["React", "CSS3"],
+          "text": "An application created with React Native and CSS that allows you to explore NASA data and news, keeping you informed about space and space missions.",
+          "links": ["https://github.com/crisvegadiaz/ReactNative_ProyectoNasa-"]
+        },
+        {
+          "img": "AppCaloria.webp",
+          "subtitle": "Calorie App",
+          "icons": ["React", "CSS3"],
+          "text": "A calorie counting application, developed with React Native and CSS. It helps you track your daily calorie intake and maintain a healthy lifestyle.",
+          "links": ["https://github.com/crisvegadiaz/ReactNative_AppCalorias"]
+        },
+        {
+          "img": "JuegodelHorcado.webp",
+          "subtitle": "Hangman Game",
+          "icons": ["HTML5", "CSS3", "JavaScript"],
+          "text": "This page, created with HTML, CSS, and JavaScript, allows you to enjoy the popular Hangman game anytime, anywhere. Guess the secret word letter by letter before the hangman is complete.",
+          "links": [
+            "https://github.com/crisvegadiaz/juego_del_ahorcado",
+            "https://superlative-liger-734e6a.netlify.app/"
+          ]
+        },
+        {
+          "img": "ReactJuegodelHorcado.webp",
+          "subtitle": "Hangman Game in React",
+          "icons": ["React", "JavaScript"],
+          "text": "This page, created with HTML, CSS, JavaScript, and React allows you to enjoy the popular Hangman game anytime, anywhere. Guess the secret word letter by letter before the hangman is complete.",
+          "links": [
+            "https://github.com/crisvegadiaz/JuegoDelHorcadoReact",
+            "https://mellow-zabaione-2b201e.netlify.app/"
+          ]
+        },
+        {
+          "img": "Calculadora.webp",
+          "subtitle": "Calculator in React",
+          "icons": ["React", "CSS3", "JavaScript"],
+          "text": "On this website, you can perform basic mathematical operations quickly and easily. The site is created with HTML, CSS, JavaScript, and React.",
+          "links": [
+            "https://github.com/crisvegadiaz/ReactCalculadora",
+            "https://astounding-sawine-944061.netlify.app/"
+          ]
+        },
+        {
+          "img": "ViteReact.webp",
+          "subtitle": "Random Quotes",
+          "icons": ["React", "CSS3", "JavaScript"],
+          "text": "On this website, you can find motivational and reflective quotes from different authors and eras. Each time you load the page, a new random quote will be shown. The site is created with HTML, CSS, JavaScript, and React.",
+          "links": [
+            "https://github.com/crisvegadiaz/React-citas-aleatorio-",
+            "https://effervescent-starlight-af3e40.netlify.app/"
+          ]
+        },
+        {
+          "img": "ReactRelojo.webp",
+          "subtitle": "Break Clock",
+          "icons": ["React", "CSS3", "JavaScript"],
+          "text": "The Break Clock is the perfect solution for you! This tool, created with HTML, CSS, JavaScript, and React, helps you optimize your work time and improve your well-being.",
+          "links": [
+            "https://github.com/crisvegadiaz/ReactReloj",
+            "https://mellifluous-brioche-683a3b.netlify.app/"
+          ]
+        },
+        {
+          "img": "Encritador.webp",
+          "subtitle": "Text Encryptor",
+          "icons": ["HTML5", "CSS3", "JavaScript"],
+          "text": "On this website, you can securely and freely encrypt and decrypt your messages. The site is created with HTML, CSS, and JavaScript.",
+          "links": [
+            "https://github.com/crisvegadiaz/encriptador",
+            "https://venerable-bavarois-ba1789.netlify.app/"
+          ]
+        },
+        {
+          "img": "Gonzalez.webp",
+          "subtitle": "School Page",
+          "icons": ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+          "text": "This website, created with HTML, CSS, JavaScript, and Bootstrap, offers a dynamic and interactive educational experience for students of all ages.",
+          "links": [
+            "https://github.com/crisvegadiaz/Pagina-institucional",
+            "https://clinquant-travesseiro-9bd6ec.netlify.app/"
+          ]
+        },
+        {
+          "img": "MarcadorDeMarkdown.webp",
+          "subtitle": "Markdown Marker",
+          "icons": ["HTML5", "CSS3", "JavaScript", "React"],
+          "text": "This Markdown Marker, created with HTML, CSS, JavaScript, and React, offers everything you need to work with your Markdown files efficiently.",
+          "links": [
+            "https://github.com/crisvegadiaz/ReactMarcadorDeMarkdown",
+            "https://heroic-zuccutto-e7944c.netlify.app/"
+          ]
+        },
+        {
+          "img": "Scritp.webp",
+          "subtitle": "Bash Scripts",
+          "icons": ["Linux"],
+          "text": "The Scripts are a collection of programs or scripts written in Bash language, designed to automate tasks on Linux operating systems.",
+          "links": ["https://github.com/crisvegadiaz/script_sh"]
+        },
+        {
+          "img": "NodeClima.webp",
+          "subtitle": "Node Weather",
+          "icons": ["Node"],
+          "text": "This Node.js application fetches and displays current weather information for a given city using the OpenWeatherMap API.",
+          "links": ["https://github.com/crisvegadiaz/NodeWeather"]
+        },
+        {
+          "img": "NodeList.webp",
+          "subtitle": "Node To-Do App",
+          "icons": ["Node"],
+          "text": "This program uses Node.js and some external libraries like 'readline' and 'chalk' to create a simple to-do list application.",
+          "links": ["https://github.com/crisvegadiaz/NodeToDoApp"]
+        },
+        {
+          "img": "NodeImg.webp",
+          "subtitle": "Image Optimizer",
+          "icons": ["Node"],
+          "text": "This Node.js script is designed to optimize images in a specific folder. It uses various libraries, such as sharp to resize images and imagemin to compress images in various formats.",
+          "links": ["https://github.com/crisvegadiaz/NodeToDoApp"]
+        },
+        {
+          "img": "HotelJava.webp",
+          "subtitle": "Hotel Registration",
+          "icons": ["Java", "SQL"],
+          "text": "The system is developed with Java and MySQL. Java is used to create the user interface and program logic, while MySQL stores reservation and guest data.",
+          "links": ["https://github.com/crisvegadiaz/Hotel-Alura"]
+        }
+      ]
+    }
+  },
+  "footer": {
+    "copyright": "©️ 2025 Cristian Diaz Vega. All rights reserved.",
+    "languageOptions": {
+      "title": "🌐 Language",
+      "es": "🇪🇸 Spanish",
+      "en": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 English"
+    }
+  }
+}
