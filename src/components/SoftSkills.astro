@@ -1,0 +1,121 @@
+---
+const { skills } = Astro.props;
+const { title, description, skillCategories } = skills;
+---
+
+<>
+  <h2 id="soft-skills">{title}</h2>
+  <p>{description}</p>
+  <ul>
+    {
+      skillCategories.map(({ subtitle, text }) => (
+        <li>
+          <details name="info">
+            <summary>{subtitle}</summary>
+            <p>{text}</p>
+          </details>
+        </li>
+      ))
+    }
+  </ul>
+</>
+
+<style>
+  h2 {
+    font-size: 2.1rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    border-bottom: 3px solid var(--color-purple);
+    width: fit-content;
+    padding-bottom: 0.3rem;
+    letter-spacing: 1px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: var(--color-light-blue);
+    line-height: 1.6;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 1.2rem 0 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: start;
+    width: 80%;
+  }
+
+  ul li {
+    background: var(--color-fondo-elemento);
+    border-radius: 0.7rem;
+    box-shadow: 0 2px 8px 0 var(--color-sombra-sutil);
+    transition: background 0.2s;
+  }
+
+  ul li:hover {
+    background: var(--color-fondo-elemento-hover);
+  }
+
+  details {
+    padding: 0.8rem 1.2rem;
+  }
+
+  summary {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--color-green);
+    cursor: pointer;
+    list-style: none;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary::before {
+    content: "⋗";
+    margin-right: 0.5rem;
+    display: inline-block;
+    transition: transform 0.2s;
+    font-size: 1.5em;
+  }
+
+  details[open] > summary::before {
+    transform: rotate(90deg);
+  }
+
+  details p {
+    color: var(--color-white);
+    line-height: 1.6;
+    font-size: 1.1rem;
+    padding: 19px;
+    box-sizing: border-box;
+  }
+
+  @media (width < 1024px) {
+    ul {
+      width: 100%;
+    }
+  }
+
+  @media (width < 768px) {
+    ul {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+    }
+    summary {
+      font-size: 1.1rem;
+    }
+    details p {
+      font-size: 1rem;
+    }
+  }
+</style>

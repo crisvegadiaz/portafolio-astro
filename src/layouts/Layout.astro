@@ -1,42 +1,165 @@
 ---
 import Background from "../components/Background.astro";
-import Footer from "../components/Footer.astro";
-const { title } = Astro.props;
+const { title, description, lang = "es" } = Astro.props.content;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
+    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/code.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
   <body>
     <Background />
     <slot />
-    <Footer />
   </body>
 </html>
 
 <style is:global>
-  body {
+  html,
+  body,
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  img,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  b,
+  u,
+  i,
+  center,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td,
+  article,
+  aside,
+  canvas,
+  details,
+  embed,
+  figure,
+  figcaption,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  output,
+  ruby,
+  section,
+  summary,
+  time,
+  mark,
+  audio,
+  video {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+    display: block;
+  }
+  body {
+    line-height: 1;
+  }
+  ol,
+  ul {
+    list-style: none;
+  }
+  blockquote,
+  q {
+    quotes: none;
+  }
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+    content: "";
+    content: none;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
   }
 
   :root {
     --color-gray: #9fa6af;
     --color-white: #ffffff;
-    --color-green: #17b877;
+    --color-green: #00ffd0;
     --color-purple: #a87ffb;
-    --color-light-blue: #25a6e9;
+    --color-light-blue: #00bfff;
     --color-dark: #10151d;
     --color-dark-blue: #151f2b;
     --color-deep-blue: #1d2633;
     --color-navy-blue: #2e3c51;
+    --color-fondo-elemento: rgba(60, 65, 100, 0.25);
+    --color-sombra-sutil: rgba(31, 38, 135, 0.07);
+    --color-fondo-elemento-hover: rgba(80, 200, 180, 0.18);
+    --color-sombra-icono: rgba(0, 0, 0, 0.12);
+    --color-fondo-icono: #fff2;
+    --proyectos-columns: 3;
   }
 
   /* Define la fuente personalizada */
@@ -58,5 +181,39 @@ const { title } = Astro.props;
     font-weight: 100 900;
     font-style: italic;
     font-display: swap;
+  }
+
+  body {
+    display: grid;
+    grid-template-columns: 3rem repeat(5, 1fr);
+    grid-template-rows: 1fr 1.5rem;
+    grid-template-areas:
+      "header main main main main main"
+      "logo footer footer footer footer footer";
+  }
+
+  body.submenu-active {
+    grid-template-areas:
+      "header submenu main main main main"
+      "logo footer footer footer footer footer";
+  }
+
+  @media (width < 1024px) {
+    body {
+      grid-template-rows: 1fr 3rem;
+    }
+    body.submenu-active {
+      grid-template-areas:
+        "header submenu submenu main main main"
+        "logo footer footer footer footer footer";
+    }
+  }
+
+  @media (width < 768px) {
+    body.submenu-active {
+      grid-template-areas:
+        "header submenu submenu submenu submenu main"
+        "logo footer footer footer footer footer";
+    }
   }
 </style>

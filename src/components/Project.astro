@@ -1,0 +1,53 @@
+---
+import Card from "./Card.astro";
+const { project } = Astro.props;
+const { title, description, cards } = project;
+---
+
+<>
+  <h2 id="project">{title}</h2>
+  <p>{description}</p>
+  <ul>
+    {cards.map((card) => <Card card={card} />)}
+  </ul>
+</>
+
+<style>
+  h2 {
+    font-size: 2.1rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    border-bottom: 3px solid var(--color-purple);
+    width: fit-content;
+    padding-bottom: 0.3rem;
+    letter-spacing: 1px;
+  }
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-light-blue);
+    line-height: 1.6;
+  }
+
+  ul {
+    align-items: start;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(var(--proyectos-columns), minmax(0, 1fr));
+  }
+
+  @media (width < 1024px) {
+    ul {
+      --proyectos-columns: 2;
+      gap: 1.5rem;
+    }
+  }
+
+  @media (width < 768px) {
+    ul {
+      --proyectos-columns: 1;
+      gap: 1rem;
+    }
+  }
+</style>

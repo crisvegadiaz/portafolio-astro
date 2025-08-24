@@ -1,0 +1,25 @@
+---
+const { content } = Astro.props;
+const { start, technicalSkills, softSkills ,project} = content;
+import TechnicalSkills from "./TechnicalSkills.astro";
+import Project from "./Project.astro";
+import SoftSkills from "./SoftSkills.astro";
+import Start from "./Start.astro";
+---
+
+<main>
+  <Start start={start} />
+  <TechnicalSkills skills={technicalSkills} />
+  <SoftSkills skills={softSkills} />
+  <Project project={project} />
+</main>
+
+<style>
+  main {
+    color: var(--color-white);
+    font-family: "Roboto", sans-serif;
+    margin: 2rem;
+    grid-area: main;
+    overflow: hidden;
+  }
+</style>

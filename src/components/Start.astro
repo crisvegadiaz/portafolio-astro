@@ -1,0 +1,74 @@
+---
+const { start } = Astro.props;
+const { title, description } = start;
+---
+
+<>
+  <h1 id="start">{title}</h1>
+  <p>{description}</p>
+</>
+
+<style>
+  h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1.2rem;
+    font-weight: bold;
+    background: linear-gradient(
+      90deg,
+      var(--color-green) 0%,
+      var(--color-light-blue) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation:
+      typing 2s steps(30, end),
+      blink-caret 0.75s step-end infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid var(--color-green);
+    box-sizing: border-box;
+    letter-spacing: 2px;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: var(--color-green);
+    }
+  }
+
+  p {
+    font-size: 1.25rem;
+    width: 70%;
+    margin-bottom: 2rem;
+    color: var(--color-white);
+    line-height: 1.7;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.2rem;
+      line-height: 1.2;
+      white-space: normal;
+      animation: none;
+      border-right: none;
+      width: 100%;
+    }
+    p {
+      width: 100%;
+      font-size: 1rem;
+    }
+  }
+</style>

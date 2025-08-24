@@ -1,0 +1,113 @@
+---
+const { skills } = Astro.props;
+const { title, description, skillCategories } = skills;
+---
+
+<>
+  <h2 id="technical-skills">{title}</h2>
+  <p>{description}</p>
+
+  {
+    skillCategories.map(({ subtitle, items }) => (
+      <>
+        <h3>{subtitle}</h3>
+        <ul>
+          {items.map(({ item, itemTitle }) => (
+            <li title={itemTitle}>
+              <img
+                src={`/icons/${item}.svg`}
+                alt={item}
+                width="24"
+                height="24"
+              />
+              {item}
+            </li>
+          ))}
+        </ul>
+      </>
+    ))
+  }
+</>
+
+<style>
+  h2 {
+    font-size: 2.1rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.2rem;
+    font-weight: bold;
+    border-bottom: 3px solid var(--color-purple);
+    width: fit-content;
+    padding-bottom: 0.3rem;
+    letter-spacing: 1px;
+  }
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-light-blue);
+    line-height: 1.6;
+  }
+
+  h3 {
+    font-size: 1.35rem;
+    margin-top: 1.2rem;
+    margin-bottom: 0.7rem;
+    font-weight: 600;
+    color: var(--color-green);
+    letter-spacing: 0.5px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 1.2rem 0 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem 2.5rem;
+  }
+
+  li {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    background: var(--color-fondo-elemento);
+    border-radius: 0.7rem;
+    padding: 0.5rem 1rem;
+    transition:
+      background 0.2s,
+      transform 0.2s;
+    box-shadow: 0 2px 8px 0 var(--color-sombra-sutil);
+  }
+
+  li:hover {
+    background: var(--color-fondo-elemento-hover);
+    transform: translateY(-2px) scale(1.04);
+  }
+
+  img {
+    filter: drop-shadow(0 2px 6px var(--color-sombra-icono));
+    border-radius: 0.3rem;
+    background: var(--color-fondo-icono);
+    padding: 0.15rem;
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 1.8rem;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    h3 {
+      font-size: 1.2rem;
+    }
+    ul {
+      gap: 1rem 1.5rem;
+    }
+    li {
+      font-size: 1rem;
+      padding: 0.4rem 0.8rem;
+    }
+  }
+</style>
