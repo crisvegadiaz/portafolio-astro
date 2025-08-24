@@ -1,51 +1,64 @@
+---
+const { contact } = Astro.props;
+const { title, description, email, ariaLabel, form } = contact;
+---
+
 <article class="contact">
-  <h2>Formulario</h2>
-  <p>Por favor, completa el siguiente formulario para contactarme:</p>
-  <p>Tu información será tratada con confidencialidad.</p>
-  <p>
-    Si prefieres, puedes enviarme un correo a:
-    <a
-      href="#"
-      onclick="window.location.href='mailto:' + ['alexander','gmail.com'].join('@'); return false;"
-    >
-      alexander@gmail.com
-    </a>
-  </p>
-  <p>Gracias por tu interés en mi trabajo.</p>
-  <form>
-    <label for="name">👤 Nombre:</label>
+  <h2>{title}</h2>
+  {
+    description.map((desc, i) =>
+      i === 2 ? (
+        <p>
+          {desc}
+          <a
+            aria-label={ariaLabel.replace("{email}", email)}
+            href={`mailto:${email}`}
+          >
+            {email}
+          </a>
+        </p>
+      ) : (
+        <p>{desc}</p>
+      )
+    )
+  }
+  <form id="contact-form">
+    <label for="name">{form.nameLabel}</label>
     <input
       type="text"
       id="name"
       name="name"
-      placeholder="Tu nombre: ej. Alexander"
+      placeholder={form.namePlaceholder}
       pattern="^[A-Za-z\s]+$"
-      title="Solo se permiten letras y espacios"
+      title={form.nameTitle}
       required
     />
-    <label for="email">📧 Correo electrónico:</label>
+    <label for="email">{form.emailLabel}</label>
     <input
       type="email"
       id="email"
       name="email"
-      placeholder="Tu correo: ej. alexander@gmail.com "
+      placeholder={form.emailPlaceholder}
       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-      title="Formato de correo electrónico no válido"
+      title={form.emailTitle}
       required
     />
-    <label for="message">✍️ Mensaje:</label>
+    <label for="message">{form.messageLabel}</label>
     <textarea
       id="message"
       name="message"
       rows="4"
-      placeholder="Tu mensaje: ej. Hola, me gustaría saber más sobre tu trabajo."
+      placeholder={form.messagePlaceholder}
       minlength="1"
       maxlength="500"
-      title="El mensaje debe tener entre 1 y 500 caracteres"
+      title={form.messageTitle}
       required></textarea>
-    <button type="submit">Enviar</button>
+    <button type="submit" id="submit-button">{form.submitButton}</button>
   </form>
+  
 </article>
+
+<script is:inline src="/js/form.js"></script>
 
 <style>
   .contact {
@@ -59,7 +72,25 @@
   article {
     color: var(--color-white);
     font-family: "Roboto", sans-serif;
-    margin: 1rem;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+  }
+
+  h2 {
+    color: var(--color-purple);
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  a {
+    color: var(--color-purple);
   }
 
   form {
@@ -69,6 +100,7 @@
   }
   label {
     font-weight: bold;
+    font-size: 1rem;
   }
   input,
   textarea {
@@ -76,12 +108,14 @@
     padding: 0.5rem;
     border: 1px solid var(--color-green);
     border-radius: 4px;
-    font-size: 13px;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 500;
     background-color: var(--color-navy-blue);
     resize: none;
   }
   button {
+    font-size: 1rem;
+    font-weight: 700;
     padding: 0.5rem 1rem;
     background-color: var(--color-light-blue);
     color: var(--color-white);
