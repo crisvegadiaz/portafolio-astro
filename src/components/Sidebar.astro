@@ -1,10 +1,10 @@
 ---
-import SecondarySidebar from "./SecondarySidebar.astro";
 import SearchIcon from "../assets/icons/search.svg";
 import GithubIcon from "../assets/icons/github.svg";
 import Linkedin from "../assets/icons/linkedin.svg";
 import EmailIcon from "../assets/icons/email.svg";
 import FileIcon from "../assets/icons/file.svg";
+import Cv from "../assets/icons/cv.svg";
 ---
 
 <header>
@@ -36,41 +36,45 @@ import FileIcon from "../assets/icons/file.svg";
     <a
       title="GitHub"
       href="https://github.com/crisvegadiaz"
-      target="_blank"
-      rel="noopener noreferrer"
       class="button"
       aria-label="GitHub"
+      target="_blank"
+      rel="noopener noreferrer"
     >
       <GithubIcon />
     </a>
     <a
-      href="https://www.linkedin.com/in/cristian-diaz-vega-7a186521b/"
-      target="_blank"
-      rel="noopener noreferrer"
       title="LinkedIn"
+      href="https://www.linkedin.com/in/cristian-diaz-vega-7a186521b/"
       class="button"
       aria-label="LinkedIn"
+      target="_blank"
+      rel="noopener noreferrer"
     >
       <Linkedin />
     </a>
+    <a
+      title="CV"
+      href="/path/Desarrollador_Web_Fullstack.pdf"
+      class="button"
+      aria-label="CV"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Cv />
+    </a>
   </nav>
-  <SecondarySidebar />
 </header>
-
-<script is:inline src="/js/sidebar.js"></script>
 
 <style>
   header {
+    grid-area: header;
     background-color: var(--color-dark-blue);
-    position: sticky;
-    top: 0;
-    z-index: 98;
-    height: 97vh;
-    display: flex;
   }
 
   nav {
-    width: 3rem;
+    position: sticky;
+    top: 0;
   }
 
   .button {
@@ -90,7 +94,7 @@ import FileIcon from "../assets/icons/file.svg";
   }
 
   .button svg {
-    width: 30px;
+    width: 40px;
     height: 30px;
     transition:
       fill 0.2s ease-in-out,
@@ -104,5 +108,10 @@ import FileIcon from "../assets/icons/file.svg";
   .button-active svg {
     stroke: var(--color-white);
     stroke-width: 4;
+  }
+
+  @media (width < 768px) {
+    header {
+    }
   }
 </style>

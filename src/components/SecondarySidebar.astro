@@ -1,25 +1,33 @@
 ---
 import Explore from "./Explore.astro";
 import Contact from "./Contact.astro";
+import Search from "./Search.astro";
+const { sidebar } = Astro.props;
+const { explore, contact, search } = sidebar;
 ---
 
 <section class="secondary-sidebar">
-  <Explore />
-  <Contact />
+  <Explore explore={explore} />
+  <Contact contact={contact} />
+  <Search search={search} />
 </section>
 
 <style>
   section {
-    width: 20rem;
+    grid-area: submenu;
     background-color: var(--color-deep-blue);
-    padding: 0;
   }
-  
+
   .secondary-sidebar {
     display: none;
   }
 
   .secondary-active {
     display: block;
+  }
+
+  @media (width < 768px) {
+    .secondary-sidebar {
+    }
   }
 </style>
