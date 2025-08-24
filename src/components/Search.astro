@@ -1,0 +1,65 @@
+---
+import Menu from "../assets/icons/menu.svg";
+const { search } = Astro.props;
+const { title, placeholder, ariaLabel, titleInput, links } = search;
+---
+
+<article class="search">
+  <h2>{title} <Menu /></h2>
+  <input
+    type="text"
+    id="search-input"
+    name="search"
+    placeholder={placeholder}
+    aria-label={ariaLabel}
+    pattern="^[A-Za-z\s]+$"
+    title={titleInput}
+    required
+    list="search-suggestions"
+  />
+  <datalist id="search-suggestions">
+    {links.map((link) => <option value={link.href} label={link.text} />)}
+  </datalist>
+</article>
+
+<script is:inline src="/js/search.js"></script>
+
+<style>
+  .search {
+    display: none;
+  }
+
+  .search-active {
+    display: block;
+  }
+
+  article {
+    color: var(--color-white);
+    font-family: "Roboto", sans-serif;
+    position: sticky;
+    top: 0;
+    box-sizing: border-box;
+  }
+
+  h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.8rem;
+    color: var(--color-white);
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  input {
+    padding: 0.5rem;
+    border: 1px solid var(--color-gray);
+    border-radius: 4px;
+    background-color: var(--color-light-gray);
+    color: var(--color-dark-gray);
+    width: 95%;
+    box-sizing: border-box;
+    padding: 0.3rem;
+    margin: 0.5rem;
+  }
+</style>
