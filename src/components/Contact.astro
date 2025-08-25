@@ -29,7 +29,7 @@ const { title, description, email, ariaLabel, form } = contact;
       id="name"
       name="name"
       placeholder={form.namePlaceholder}
-      pattern="^[A-Za-z\s]+$"
+      pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\\s]+$"
       title={form.nameTitle}
       required
     />
@@ -55,7 +55,6 @@ const { title, description, email, ariaLabel, form } = contact;
       required></textarea>
     <button type="submit" id="submit-button">{form.submitButton}</button>
   </form>
-  
 </article>
 
 <script is:inline src="/js/form.js"></script>
@@ -114,6 +113,7 @@ const { title, description, email, ariaLabel, form } = contact;
     resize: none;
   }
   button {
+    height: 3rem;
     font-size: 1rem;
     font-weight: 700;
     padding: 0.5rem 1rem;
