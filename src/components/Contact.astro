@@ -110,7 +110,14 @@ const { title, description, email, ariaLabel, form } = contact;
     font-size: 1rem;
     font-weight: 500;
     background-color: var(--color-navy-blue);
-    resize: none;
+    resize: vertical;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  input:focus,
+  textarea:focus {
+    border-color: var(--color-light-blue);
+    box-shadow: 0 0 5px var(--color-light-blue);
+    outline: none;
   }
   button {
     height: 3rem;
@@ -122,5 +129,9 @@ const { title, description, email, ariaLabel, form } = contact;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button:hover:not(:disabled) {
+    background-color: var(--color-green);
   }
 </style>
