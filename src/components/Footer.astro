@@ -1,17 +1,15 @@
 ---
 const { footer } = Astro.props;
-const { title, ...languages } = footer.languageOptions;
-const langKeys = Object.keys(languages);
+const keys = Object.keys(footer.languageOptions);
 ---
 
 <footer>
   <p>{footer.copyright}</p>
-  <label for="language" class="sr-only">{title}</label>
   <select id="language" name="language">
     {
-      langKeys.map((key) => (
+      keys.map((key) => (
         <option value={key} selected={key === footer.selectedLanguage}>
-          {languages[key]}
+          {footer.languageOptions[key]}
         </option>
       ))
     }
@@ -21,17 +19,6 @@ const langKeys = Object.keys(languages);
 <script is:inline src="/js/footer.js"></script>
 
 <style>
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-  }
   footer {
     grid-area: footer;
     display: flex;
