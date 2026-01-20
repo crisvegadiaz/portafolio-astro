@@ -4,13 +4,13 @@ const { project } = Astro.props;
 const { title, description, cards } = project;
 ---
 
-<>
+<section>
   <h2 id="project">{title}</h2>
   <p>{description}</p>
   <ul>
     {cards.map((card) => <Card card={card} />)}
   </ul>
-</>
+<section/>
 
 <style>
   h2 {

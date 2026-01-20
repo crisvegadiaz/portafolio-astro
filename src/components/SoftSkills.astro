@@ -3,7 +3,7 @@ const { skills } = Astro.props;
 const { title, description, skillCategories } = skills;
 ---
 
-<>
+<section>
   <h2 id="soft-skills">{title}</h2>
   <p>{description}</p>
   <ul>
@@ -18,7 +18,7 @@ const { title, description, skillCategories } = skills;
       ))
     }
   </ul>
-</>
+<section/>
 
 <style>
   h2 {
