@@ -4,10 +4,22 @@
       "title": "EXPLORAR",
       "folder": "PROTAFOLIO",
       "links": [
-        { "text": "Inicio", "href": "#start" },
-        { "text": "Tecnologías", "href": "#technical-skills" },
-        { "text": "Habilidades Blandas", "href": "#soft-skills" },
-        { "text": "Proyectos", "href": "#project" }
+        { "text": "Inicio", "href": "#start", "title": "Sección de inicio" },
+        {
+          "text": "Tecnologías",
+          "href": "#technical-skills",
+          "title": "Sección de tecnologías"
+        },
+        {
+          "text": "Habilidades Blandas",
+          "href": "#soft-skills",
+          "title": "Sección de habilidades blandas"
+        },
+        {
+          "text": "Proyectos",
+          "href": "#project",
+          "title": "Sección de proyectos"
+        }
       ]
     },
     "contact": {
@@ -34,17 +46,17 @@
       }
     },
     "search": {
-    "title": "BÚSQUEDA",
-    "placeholder": "Buscar en el portafolio...",
-    "ariaLabel": "Buscar en el portafolio",
-    "titleInput": "Buscar contenido usando solo letras y espacios",
-    "links": [
-      { "text": "Inicio", "href": "#start" },
-      { "text": "Habilidades técnicas", "href": "#technical-skills" },
-      { "text": "Habilidades blandas", "href": "#soft-skills" },
-      { "text": "Proyectos", "href": "#project" }
-    ]
-  }
+      "title": "BÚSQUEDA",
+      "placeholder": "Buscar en el portafolio...",
+      "ariaLabel": "Buscar en el portafolio",
+      "titleInput": "Buscar contenido usando solo letras y espacios",
+      "links": [
+        { "text": "Inicio", "href": "#start" },
+        { "text": "Habilidades técnicas", "href": "#technical-skills" },
+        { "text": "Habilidades blandas", "href": "#soft-skills" },
+        { "text": "Proyectos", "href": "#project" }
+      ]
+    }
   },
   "content": {
     "title": "Portafolio de Cristian Diaz Vega",
@@ -170,7 +182,7 @@
         {
           "img": "Microservicio.webp",
           "subtitle": "Microservicios con Api-rest",
-          "icons": ["Node", "SQL","Docker"],
+          "icons": ["Node", "SQL", "Docker"],
           "text": "Este proyecto implementa una arquitectura basada en microservicios que combina las siguientes tecnologías: Node.JavaScript, Express, Base de Datos SQL y Podman. Cada microservicio tiene su propia base de datos y se comunica con otros microservicios a través de API REST.",
           "links": ["https://github.com/crisvegadiaz/microservicios-api-rest"]
         },

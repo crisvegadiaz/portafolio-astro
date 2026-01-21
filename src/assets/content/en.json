@@ -4,10 +4,18 @@
       "title": "EXPLORE",
       "folder": "PORTFOLIO",
       "links": [
-        { "text": "Start", "href": "#start" },
-        { "text": "Technical Skills", "href": "#technical-skills" },
-        { "text": "Soft Skills", "href": "#soft-skills" },
-        { "text": "Project", "href": "#project" }
+        { "text": "Start", "href": "#start", "title": "Start section" },
+        {
+          "text": "Technical Skills",
+          "href": "#technical-skills",
+          "title": "Technical Skills section"
+        },
+        {
+          "text": "Soft Skills",
+          "href": "#soft-skills",
+          "title": "Soft Skills section"
+        },
+        { "text": "Project", "href": "#project", "title": "Project section" }
       ]
     },
     "contact": {
@@ -170,7 +178,7 @@
         {
           "img": "Microservicio.webp",
           "subtitle": "Microservices with API-REST",
-          "icons": ["Node", "SQL","Docker"],
+          "icons": ["Node", "SQL", "Docker"],
           "text": "This project implements a microservices-based architecture that combines the following technologies: Node.js, Express, a SQL Database, and Podman. Each microservice has its own database and communicates with other microservices through REST APIs.",
           "links": ["https://github.com/crisvegadiaz/microservicios-api-rest"]
         },

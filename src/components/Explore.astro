@@ -9,7 +9,6 @@ const { title, folder, links } = explore;
 ---
 
 <article class="explore">
-  
   <h2>
     {title}
     <Menu />
@@ -28,10 +27,9 @@ const { title, folder, links } = explore;
       </summary>
       <ul>
         {
-          links.map
-          (({text, href}) => (
+          links.map(({ text, href, title }) => (
             <li>
-              <a href={href} aria-label={text}>
+              <a href={href} title={title} aria-label={text}>
                 <FileSearch />
                 {text}
               </a>
