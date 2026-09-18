@@ -1,4 +1,14 @@
 ---
+interface FooterData {
+  copyright: string;
+  selectedLanguage: string;
+  languageOptions: Record<string, string>;
+}
+
+interface Props {
+  footer: FooterData;
+}
+
 const { footer } = Astro.props;
 const keys = Object.keys(footer.languageOptions).filter(
   (key) => key !== "title",

@@ -1,4 +1,13 @@
 ---
+interface StartData {
+  title: string;
+  description: string;
+}
+
+interface Props {
+  start: StartData;
+}
+
 const { start } = Astro.props;
 const { title, description } = start;
 ---
@@ -6,7 +15,7 @@ const { title, description } = start;
 <section>
   <h1 id="start">{title}</h1>
   <p>{description}</p>
-<section/>
+</section>
 
 <style>
   h1 {

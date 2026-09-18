@@ -1,10 +1,22 @@
 ---
+import Start from "./Start.astro";
+import TechnicalSkills from "./TechnicalSkills.astro";
+import SoftSkills from "./SoftSkills.astro";
+import Project from "./Project.astro";
+
+interface ContentData {
+  start: any;
+  technicalSkills: any;
+  softSkills: any;
+  project: any;
+}
+
+interface Props {
+  content: ContentData;
+}
+
 const { content } = Astro.props;
 const { start, technicalSkills, softSkills, project } = content;
-import TechnicalSkills from "./TechnicalSkills.astro";
-import Project from "./Project.astro";
-import SoftSkills from "./SoftSkills.astro";
-import Start from "./Start.astro";
 ---
 
 <main>

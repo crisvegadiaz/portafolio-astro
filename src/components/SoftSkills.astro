@@ -1,4 +1,19 @@
 ---
+interface SkillCategory {
+  subtitle: string;
+  text: string;
+}
+
+interface SoftSkillsData {
+  title: string;
+  description: string;
+  skillCategories: SkillCategory[];
+}
+
+interface Props {
+  skills: SoftSkillsData;
+}
+
 const { skills } = Astro.props;
 const { title, description, skillCategories } = skills;
 ---
@@ -18,7 +33,7 @@ const { title, description, skillCategories } = skills;
       ))
     }
   </ul>
-<section/>
+</section>
 
 <style>
   h2 {

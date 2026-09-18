@@ -1,5 +1,16 @@
 ---
 import Background from "../components/Background.astro";
+
+interface ContentMeta {
+  title: string;
+  description: string;
+  lang?: string;
+}
+
+interface Props {
+  content: ContentMeta;
+}
+
 const { title, description, lang = "es" } = Astro.props.content;
 ---
 
@@ -165,18 +176,15 @@ const { title, description, lang = "es" } = Astro.props.content;
   /* Define la fuente personalizada */
   @font-face {
     font-family: "Roboto";
-    src: url("/public/Roboto/Roboto-VariableFont_wdth\,wght.ttf")
-      format("truetype");
+    src: url("/Roboto/Roboto-VariableFont_wdth,wght.ttf") format("truetype");
     font-weight: 100 900;
-    font-style: normal;
-    font-weight: normal;
     font-style: normal;
     font-display: swap;
   }
 
   @font-face {
     font-family: "Roboto";
-    src: url("/public/Roboto/Roboto-Italic-VariableFont_wdth\,wght.ttf")
+    src: url("/Roboto/Roboto-Italic-VariableFont_wdth,wght.ttf")
       format("truetype");
     font-weight: 100 900;
     font-style: italic;

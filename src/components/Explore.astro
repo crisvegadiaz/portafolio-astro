@@ -4,6 +4,23 @@ import ChevronDown from "../assets/icons/chevron-down.svg";
 import FileSearch from "../assets/icons/file-search.svg";
 import Folder from "../assets/icons/folder.svg";
 import Menu from "../assets/icons/menu.svg";
+
+interface ExploreLink {
+  text: string;
+  href: string;
+  title: string;
+}
+
+interface ExploreData {
+  title: string;
+  folder: string;
+  links: ExploreLink[];
+}
+
+interface Props {
+  explore: ExploreData;
+}
+
 const { explore } = Astro.props;
 const { title, folder, links } = explore;
 ---
@@ -14,13 +31,13 @@ const { title, folder, links } = explore;
     <Menu />
   </h2>
   <details>
-    <summary class="sidebar-title1">
+    <summary class="explore-folder-title">
       <span class="icon-closed"><ChevronRight /></span>
       <span class="icon-open"><ChevronDown /></span>
       {folder}
     </summary>
     <details>
-      <summary class="sidebar-title2">
+      <summary class="explore-subfolder-title">
         <span class="icon-closed"><ChevronRight /></span>
         <span class="icon-open"><ChevronDown /></span>
         <Folder />
@@ -66,7 +83,7 @@ const { title, folder, links } = explore;
   details {
     cursor: pointer;
   }
-  .sidebar-title1 {
+  .explore-folder-title {
     font-family: "Roboto", sans-serif;
     font-size: 0.7rem;
     font-weight: bold;
@@ -80,7 +97,7 @@ const { title, folder, links } = explore;
     align-items: center;
     padding-left: 0.5rem;
   }
-  .sidebar-title2 {
+  .explore-subfolder-title {
     padding: 5px 0 5px 1rem;
   }
   summary::-webkit-details-marker {
@@ -126,13 +143,13 @@ const { title, folder, links } = explore;
   }
   @media (width < 1024px) {
     h2,
-    .sidebar-title1,
-    .sidebar-title2,
+    .explore-folder-title,
+    .explore-subfolder-title,
     a {
       font-size: 1rem;
     }
 
-    .sidebar-title2 {
+    .explore-subfolder-title {
       padding: 0.6rem 0 0.6rem 0.5rem;
     }
 

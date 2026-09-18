@@ -1,4 +1,29 @@
 ---
+interface ContactFormLabels {
+  nameLabel: string;
+  namePlaceholder: string;
+  nameTitle: string;
+  emailLabel: string;
+  emailPlaceholder: string;
+  emailTitle: string;
+  messageLabel: string;
+  messagePlaceholder: string;
+  messageTitle: string;
+  submitButton: string;
+}
+
+interface ContactData {
+  title: string;
+  description: string[];
+  email: string;
+  ariaLabel: string;
+  form: ContactFormLabels;
+}
+
+interface Props {
+  contact: ContactData;
+}
+
 const { contact } = Astro.props;
 const { title, description, email, ariaLabel, form } = contact;
 ---

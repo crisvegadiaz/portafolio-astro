@@ -1,5 +1,24 @@
 ---
 import Card from "./Card.astro";
+
+interface CardItem {
+  img: string;
+  subtitle: string;
+  icons: string[];
+  text: string;
+  links: string[];
+}
+
+interface ProjectData {
+  title: string;
+  description: string;
+  cards: CardItem[];
+}
+
+interface Props {
+  project: ProjectData;
+}
+
 const { project } = Astro.props;
 const { title, description, cards } = project;
 ---
@@ -10,7 +29,7 @@ const { title, description, cards } = project;
   <ul>
     {cards.map((card) => <Card card={card} />)}
   </ul>
-<section/>
+</section>
 
 <style>
   h2 {
@@ -34,9 +53,9 @@ const { title, description, cards } = project;
   ul {
     align-items: start;
     display: grid;
-    gap: 3rem;
+    gap: 5rem;
     grid-template-columns: repeat(var(--proyectos-columns), minmax(0, 1fr));
-    margin: 2rem;
+    margin: 4rem;
   }
 
   @media (width < 1024px) {
@@ -50,7 +69,7 @@ const { title, description, cards } = project;
     ul {
       --proyectos-columns: 1;
       gap: 1rem;
-      margin: 1rem;
+      margin: 2rem;
     }
   }
 </style>

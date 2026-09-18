@@ -1,5 +1,23 @@
 ---
 import Menu from "../assets/icons/menu.svg";
+
+interface SearchLink {
+  href: string;
+  text: string;
+}
+
+interface SearchData {
+  title: string;
+  placeholder: string;
+  ariaLabel: string;
+  titleInput: string;
+  links: SearchLink[];
+}
+
+interface Props {
+  search: SearchData;
+}
+
 const { search } = Astro.props;
 const { title, placeholder, ariaLabel, titleInput, links } = search;
 ---

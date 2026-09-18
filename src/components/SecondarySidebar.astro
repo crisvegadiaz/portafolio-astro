@@ -2,6 +2,17 @@
 import Explore from "./Explore.astro";
 import Contact from "./Contact.astro";
 import Search from "./Search.astro";
+
+interface SidebarData {
+  explore: any;
+  contact: any;
+  search: any;
+}
+
+interface Props {
+  sidebar: SidebarData;
+}
+
 const { sidebar } = Astro.props;
 const { explore, contact, search } = sidebar;
 ---
