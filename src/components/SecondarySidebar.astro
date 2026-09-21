@@ -38,7 +38,16 @@ const { explore, contact, search } = sidebar;
   }
 
   @media (width < 768px) {
-    .secondary-sidebar {
+    .secondary-sidebar.secondary-active {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 3rem;
+      left: 3rem;
+      z-index: 10;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.35);
     }
   }
 </style>
